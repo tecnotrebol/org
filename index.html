@@ -4,146 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <link rel="icon" type="image/png" href="https://pps.whatsapp.net/v/t61.24694-24/537452542_642844968760721_5447114892113779140_n.jpg?ccb=11-4&oh=01_Q5Aa3QE5-kTXV858TqHtfjA5KqotY4-ZNQLql5MBH1MuHjmeCQ&oe=694704B3&_nc_sid=5e03e0&_nc_cat=101">
-
     <title>TECNO TREBOL | Tienda</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
-
-    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <link rel="stylesheet" href="style.css"> <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
-
-    <style>
-        :root {
-            --primary: #52368c;
-            --whatsapp: #25D366;
-            --bg: #f4f4f9;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg);
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        header {
-            background: linear-gradient(135deg, #4b0082, #191970);
-            color: #fff;
-            padding: 15px 10px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            font-style: italic;
-            color: #fff;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
-            white-space: nowrap; 
-            line-height: 1;
-        }
-
-        .search-box {
-            background: #fff;
-            border-radius: 50px;
-            display: flex;
-            padding: 2px 10px;
-            width: 95%;
-            max-width: 500px;
-            align-items: center;
-        }
-
-        .search-box input { border: 0; outline: none; width: 100%; padding: 10px; font-size: 14px; border-radius: 50px; }
-        .search-box button { background: var(--primary); color: white; border: 0; border-radius: 50%; width: 35px; height: 35px; flex-shrink: 0; }
-
-        .quick-contact {
-            display: flex; justify-content: space-around; width: 100%;
-            background: rgba(255,255,255,0.1); padding: 10px 0; border-radius: 10px;
-        }
-
-        .quick-contact a { color: white; text-decoration: none; font-size: 11px; text-align: center; flex: 1; }
-        .quick-contact i { display: block; font-size: 20px; margin-bottom: 3px; color: #a29bfe; }
-
-        .container { max-width: 1200px; margin: 20px auto; padding: 0 10px; }
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-
-        .card {
-            background: #fff; border-radius: 12px; padding: 12px;
-            display: flex; flex-direction: column;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            cursor: pointer;
-        }
-
-        .card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 10px; }
-        .card h3 { font-size: 13px; margin: 5px 0; color: #333; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-        .price { color: var(--primary); font-weight: 900; font-size: 18px; margin-bottom: 10px; }
-
-        .btn-whatsapp-card {
-            background: var(--whatsapp);
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            margin-top: auto;
-        }
-
-        #modalDetalle {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.85);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            padding: 15px;
-        }
-
-        #modalBox {
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            width: 100%;
-            max-width: 400px;
-            position: relative;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            margin: auto; 
-        }
-
-        #modalBox img { width: 100%; max-height: 250px; object-fit: contain; margin: 15px 0; }
-
-        @media (min-width: 768px) {
-            .header-container { flex-direction: row; justify-content: space-between; padding: 0 20px; }
-            .grid { grid-template-columns: repeat(4, 1fr); gap: 25px; }
-            .card img { height: 220px; }
-            .card h3 { font-size: 15px; }
-        }
-    </style>
 </head>
-<body>
+<body oncontextmenu="return false">
 
 <header>
     <div class="header-container">
@@ -167,87 +35,16 @@
 
 <div id="modalDetalle" onclick="if(event.target==this)cerrar()">
     <div id="modalBox">
-        <h2 id="mNombre" style="font-size:18px; color:#333;"></h2>
-        <img id="mFoto" src="">
-        <p id="mDesc" style="font-size:14px; color:#666; line-height:1.5; margin-bottom:15px;"></p>
-        <div id="mPrecio" style="font-size:28px; color:var(--primary); font-weight:900; margin-bottom:20px;"></div>
-        
-        <a id="mBtnWhatsapp" class="btn-whatsapp-card" href="" target="_blank" style="margin-bottom: 10px;">
+        <h2 id="mNombre"></h2>
+        <img id="mFoto" src="" alt="Producto">
+        <p id="mDesc"></p>
+        <div id="mPrecio"></div>
+        <a id="mBtnWhatsapp" class="btn-whatsapp-card" href="" target="_blank">
             <i class="fab fa-whatsapp"></i> Consultar ahora
         </a>
-        
-        <button onclick="cerrar()" style="width:100%; padding:12px; border:0; background:#f1f1f1; border-radius:10px; font-weight:600; cursor:pointer;">Cerrar</button>
+        <button class="btn-cerrar" onclick="cerrar()">Cerrar</button>
     </div>
 </div>
 
-<script>
-    const firebaseConfig = { databaseURL: "https://tecnotrebol-67a34-default-rtdb.firebaseio.com" };
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    
-    let productos = [];
-    const numeroWhatsapp = "584244649564";
-
-    db.ref("productos").orderByChild("posicion").on("value", s => {
-        productos = [];
-        s.forEach(childSnapshot => {
-            productos.push({
-                id: childSnapshot.key,
-                ...childSnapshot.val()
-            });
-        });
-        mostrar(productos);
-    });
-
-    function mostrar(lista) {
-        const div = document.getElementById("productos");
-        
-        // FILTRO DE VISIBILIDAD: Solo procesamos los que NO tengan visible: false
-        const listaVisible = lista.filter(p => p.visible !== false);
-
-        div.innerHTML = listaVisible.map(p => {
-            const mensaje = encodeURIComponent(`Hola Tecno Trebol, me interesa obtener información sobre: ${p.nombre}`);
-            const linkWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensaje}`;
-
-            return `
-            <div class="card" onclick="ver('${p.id}')">
-                <img src="${p.foto}" alt="${p.nombre}">
-                <h3>${p.nombre}</h3>
-                <div class="price">${p.precio}</div>
-                <a class="btn-whatsapp-card" href="${linkWhatsapp}" target="_blank" onclick="event.stopPropagation()">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-            </div>`;
-        }).join('');
-    }
-
-    function buscarProducto() {
-        const f = document.getElementById("busquedaInput").value.toLowerCase();
-        // Filtra por nombre pero el método 'mostrar' se encargará de ocultar los no visibles
-        mostrar(productos.filter(p => p.nombre.toLowerCase().includes(f)));
-    }
-
-    function ver(id) {
-        const p = productos.find(i => i.id === id);
-        if(p) {
-            const mensaje = encodeURIComponent(`Hola Tecno Trebol, quiero más información sobre el producto: ¿${p.nombre}?`);
-            
-            document.getElementById("mNombre").textContent = p.nombre;
-            document.getElementById("mFoto").src = p.foto;
-            document.getElementById("mDesc").textContent = p.descripcion || "";
-            document.getElementById("mPrecio").textContent = p.precio;
-            document.getElementById("mBtnWhatsapp").href = `https://wa.me/${numeroWhatsapp}?text=${mensaje}`;
-            
-            document.getElementById("modalDetalle").style.display = "flex";
-            document.body.style.overflow = "hidden";
-        }
-    }
-
-    function cerrar() { 
-        document.getElementById("modalDetalle").style.display = "none"; 
-        document.body.style.overflow = "auto";
-    }
-</script>
-
-</body>
+<script src="script.js"></script> </body>
 </html>
