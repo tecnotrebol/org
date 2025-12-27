@@ -1,1 +1,125 @@
-.logotipo,.precio{peso de fuente:900}.tarjeta-btn-whatsapp,.contacto-rápido a{decoración-texto:ninguna;alineación-texto:centro}:raíz{--primario:#52368c;--whatsapp:#25D366;--bg:#f4f4f9}*{tamaño-de-caja:cuadro-de-borde;margen:0;relleno:0}cuerpo{familia-de-fuentes:Poppins,sans-serif;fondo:var(--bg);-color-de-resaltado-de-webkit:transparente}encabezado{fondo:gradiente-lineal(135deg,índigo,#191970);color:#fff;relleno:15px 10px;posición:adhesivo;superior:0;índice-z:1000;sombra-de-caja:0 4px 10px rgba(0,0,0,.2)}.header-container{ancho máximo:1200px;margen:automático;visualización:flexible;dirección flexible:columna;alinear elementos:centro;espacio:15px}.logo{tamaño de fuente:26px;transformación de texto:mayúsculas;espaciado entre letras:-1px;estilo de fuente:cursiva;color:#fff;sombra de texto:2px 2px 0 rgba(0,0,0,.5);espacio en blanco:nowrap;altura de línea:1}.search-box{fondo:#fff;radio del borde:50px;visualización:flexible;relleno:2px 10px;ancho:95%;ancho máximo:500px;alinear elementos:centro}.search-box entrada{borde:0;contorno:0;ancho:100%;relleno:10px;tamaño de fuente:14px;radio del borde:50px}.botón del cuadro de búsqueda{fondo:var(--primary);color:#fff;borde:0;radio del borde:50%;ancho:35px;alto:35px;flex-shrink:0}.contacto rápido{visualización:flexible;justificar contenido:espacio alrededor;ancho:100%;fondo:rgba(255,255,255,.1);relleno:10px 0;radio del borde:10px}#modalBox,.tarjeta{fondo:#fff}.contacto rápido a{color:#fff;tamaño de fuente:11px;flexible:1}.contacto rápido i{display:block;font-size:20px;margin-bottom:3px;color:#a29bfe}.container{max-width:1200px;margin:20px auto;padding:0 10px}.card img,.price{margin-bottom:10px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.card{border-radius:12px;padding:12px;display:flex;flex-direction:column;box-shadow:0 2px 8px rgba(0,0,0,.06);cursor:pointer}.card img{width:100%;height:150px;object-fit:contain}.card h3{font-size:13px;margin:5px 0;color:#333;altura:40px;desbordamiento:oculto;mostrar:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.price{color:var(--primary);tamaño de fuente:18px}.btn-whatsapp-card{fondo:var(--whatsapp);color:#fff;relleno:10px;radio del borde:8px;tamaño de fuente:13px;peso de fuente:600;mostrar:flexible;alinear elementos:centrar;justificar contenido: centro; espacio: 5 px; margen superior: automático}#modalDetalle{posición: fija; superior: 0; izquierda: 0; ancho: 100 %; alto: 100 %; fondo: rgba(0,0,0, .85); visualización: ninguna; contenido justificado: centrado; elementos alineados: centrado; índice z: 2000; relleno: 15 px}#modalBox{relleno: 25 px; radio del borde: 20 px; ancho: 100 %; ancho máximo: 400 px; posición: relativa; alineación del texto: centrado; sombra del cuadro: 0 15px 35px rgba(0,0,0,.4);margen:auto}#modalBox img{ancho:100%;altura máxima:250px;ajuste al objeto:contiene;margen:15px 0}@media (ancho mínimo:768px){.grid{columnas de plantilla de cuadrícula:repetir(4,1fr);espacio:25px}.card img{altura:220px}}
+:root {
+    --primary: #52368c;
+    --whatsapp: #25D366;
+    --bg: #f4f4f9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    -webkit-tap-highlight-color: transparent;
+}
+
+header {
+    background: linear-gradient(135deg, #4b0082, #191970);
+    color: #fff;
+    padding: 15px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    white-space: nowrap; 
+    line-height: 1;
+}
+
+.search-box {
+    background: #fff;
+    border-radius: 50px;
+    display: flex;
+    padding: 2px 10px;
+    width: 95%;
+    max-width: 500px;
+    align-items: center;
+}
+
+.search-box input { border: 0; outline: none; width: 100%; padding: 10px; font-size: 14px; border-radius: 50px; }
+.search-box button { background: var(--primary); color: white; border: 0; border-radius: 50%; width: 35px; height: 35px; flex-shrink: 0; }
+
+.quick-contact {
+    display: flex; justify-content: space-around; width: 100%;
+    background: rgba(255,255,255,0.1); padding: 10px 0; border-radius: 10px;
+}
+
+.quick-contact a { color: white; text-decoration: none; font-size: 11px; text-align: center; flex: 1; }
+.quick-contact i { display: block; font-size: 20px; margin-bottom: 3px; color: #a29bfe; }
+
+.container { max-width: 1200px; margin: 20px auto; padding: 0 10px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+.card {
+    background: #fff; border-radius: 12px; padding: 12px;
+    display: flex; flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 10px; }
+.card h3 { font-size: 13px; margin: 5px 0; color: #333; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.price { color: var(--primary); font-weight: 900; font-size: 18px; margin-bottom: 10px; }
+
+.btn-whatsapp-card {
+    background: var(--whatsapp);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: auto;
+}
+
+#modalDetalle {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 15px;
+}
+
+#modalBox {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    margin: auto; 
+}
+
+#modalBox img { width: 100%; max-height: 250px; object-fit: contain; margin: 15px 0; }
+
+@media (min-width: 768px) {
+    .grid { grid-template-columns: repeat(4, 1fr); gap: 25px; }
+    .card img { height: 220px; }
+}
