@@ -67,15 +67,50 @@ header {
 .container { max-width: 1200px; margin: 20px auto; padding: 0 10px; }
 .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 
+/* Tarjeta Base */
 .card {
     background: #fff; border-radius: 12px; padding: 12px;
     display: flex; flex-direction: column;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     cursor: pointer;
+    position: relative;
+}
+
+/* EFECTOS DE OFERTA */
+.card-oferta {
+    border: 2px solid #a29bfe;
+    box-shadow: 0 0 15px rgba(162, 155, 254, 0.4);
+}
+
+.badge-oferta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff4d4d;
+    color: white;
+    font-weight: 900;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 11px;
+    z-index: 5;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: 400;
 }
 
 .card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 10px; }
 .card h3 { font-size: 13px; margin: 5px 0; color: #333; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+
+/* MANTIENE COLOR MORADO ORIGINAL */
 .price { color: var(--primary); font-weight: 900; font-size: 18px; margin-bottom: 10px; }
 
 .btn-whatsapp-card {
