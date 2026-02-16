@@ -1,8 +1,8 @@
 :root {
     /* --- COLORES SAN VALENTÍN (MODIFICADOS) --- */
-    --primary: #d63384; /* Rosa intenso */
+    --primary: #4B0082; /* Rosa intenso */
     --whatsapp: #25D366;
-    --bg: #fff0f5; /* Fondo rosa suave */
+    --bg: #7B68EE; /* Fondo rosa suave */
     --text-color: #5a0026; /* Texto vino */
 }
 
@@ -18,7 +18,7 @@ body {
 header {
     /* --- IMAGEN DE FONDO (AÑADIDA) --- */
     /* CAMBIA ESTO POR LA RUTA DE TU IMAGEN */
-    background-image: url('https://res.cloudinary.com/dt4kgs8ge/image/upload/v1770767945/cbgjwtyhzsbcjaxnfskm.jpg');
+    background-image: url('https://res.cloudinary.com/dt4kgs8ge/image/upload/v1771246461/m7zypwnlgd7pncw0t9fs.png   ');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,3 +139,8 @@ header {
 }
 
 #modalBox img { width: 100%; max-height: 250px; object-fit: contain; margin: 15px 0; }
+
+@media (min-width: 768px) {
+    .grid { grid-template-columns: repeat(4, 1fr); gap: 25px; }
+    .card img { height: 220px; }
+}
