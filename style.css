@@ -1,9 +1,7 @@
 :root {
-    /* --- COLORES SAN VALENTÍN (MODIFICADOS) --- */
-    --primary: #4B0082; /* Rosa intenso */
+    --primary: #FF69B4;
     --whatsapp: #25D366;
-    --bg: #7B68EE; /* Fondo rosa suave */
-    --text-color: #5a0026; /* Texto vino */
+    --bg: #f4f4f9;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -12,24 +10,16 @@ body {
     font-family: 'Poppins', sans-serif;
     background: var(--bg);
     -webkit-tap-highlight-color: transparent;
-    color: var(--text-color);
 }
 
 header {
-    /* --- IMAGEN DE FONDO (AÑADIDA) --- */
-    /* CAMBIA ESTO POR LA RUTA DE TU IMAGEN */
-    background-image: url('https://res.cloudinary.com/dt4kgs8ge/image/upload/v1771246461/m7zypwnlgd7pncw0t9fs.png   ');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-  
-    
-    /* --- CAMBIO: La barra NO se queda fija --- */
-    position: relative; 
-    
+    background: linear-gradient(135deg, #4b0082, #FF69B4);
+    color: #fff;
+    padding: 15px 10px;
+    position: sticky;
+    top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .header-container {
@@ -39,10 +29,6 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    /* Fondo para asegurar que el texto sea legible sobre la imagen */
-    background: rgba(214, 51, 132, 0.1);
-    padding: 10px;
-    border-radius: 10px;
 }
 
 .logo {
@@ -52,7 +38,7 @@ header {
     letter-spacing: -1px;
     font-style: italic;
     color: #fff;
-    text-shadow: 2px 2px 0px rgba(100,0,0,0.5);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
     white-space: nowrap; 
     line-height: 1;
 }
@@ -67,36 +53,64 @@ header {
     align-items: center;
 }
 
-.search-box input { border: 0; outline: none; width: 100%; padding: 10px; font-size: 14px; }
+.search-box input { border: 0; outline: none; width: 100%; padding: 10px; font-size: 14px; border-radius: 50px; }
 .search-box button { background: var(--primary); color: white; border: 0; border-radius: 50%; width: 35px; height: 35px; flex-shrink: 0; }
 
 .quick-contact {
     display: flex; justify-content: space-around; width: 100%;
-    background: rgba(0,0,0,0.2);
-    padding: 10px 0; border-radius: 10px;
+    background: rgba(255,255,255,0.1); padding: 10px 0; border-radius: 10px;
 }
 
 .quick-contact a { color: white; text-decoration: none; font-size: 11px; text-align: center; flex: 1; }
-.quick-contact i { display: block; font-size: 20px; margin-bottom: 3px; color: #fff; }
+.quick-contact i { display: block; font-size: 20px; margin-bottom: 3px; color: #FFFAF0; }
 
 .container { max-width: 1200px; margin: 20px auto; padding: 0 10px; }
 .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 
 /* Tarjeta Base */
 .card {
-    background: #fff; 
-    border-radius: 12px; 
-    padding: 12px;
-    display: flex; 
-    flex-direction: column;
+    background: #fff; border-radius: 12px; padding: 12px;
+    display: flex; flex-direction: column;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     cursor: pointer;
-    border: 1px solid #ffccd5;
+    position: relative;
+}
+
+/* EFECTOS DE OFERTA */
+.card-oferta {
+    border: 2px solid #a29bfe;
+    box-shadow: 0 0 15px rgba(162, 155, 254, 0.4);
+}
+
+.badge-oferta {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff4d4d;
+    color: white;
+    font-weight: 900;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 11px;
+    z-index: 5;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: 400;
 }
 
 .card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 10px; }
 .card h3 { font-size: 13px; margin: 5px 0; color: #333; height: 40px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 
+/* MANTIENE COLOR MORADO ORIGINAL */
 .price { color: var(--primary); font-weight: 900; font-size: 18px; margin-bottom: 10px; }
 
 .btn-whatsapp-card {
@@ -115,7 +129,6 @@ header {
     margin-top: auto;
 }
 
-/* Modal Detalles */
 #modalDetalle {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -135,7 +148,8 @@ header {
     max-width: 400px;
     position: relative;
     text-align: center;
-    border: 3px solid var(--primary);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    margin: auto; 
 }
 
 #modalBox img { width: 100%; max-height: 250px; object-fit: contain; margin: 15px 0; }
