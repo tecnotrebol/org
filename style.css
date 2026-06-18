@@ -1,7 +1,7 @@
 :root {
-    --primary: #FF69B4;
+    --primary: #995afe;
     --whatsapp: #25D366;
-    --bg: #f4f4f9;
+    --bg: #e8deec;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
